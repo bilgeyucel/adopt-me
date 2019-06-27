@@ -1,0 +1,8 @@
+#list of files that git should ignore
+node_modules/
+.DS_Store
+.cache/
+dist/
+coverage/
+.vscode/ 
+.env/  
