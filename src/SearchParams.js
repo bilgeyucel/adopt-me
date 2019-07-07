@@ -12,6 +12,7 @@ const SearchParams = () => {
   useEffect(() => {
     setBreeds([]); //set breeds list
     setBreed(""); // currrently selected breed
+
     pet.breeds(animal).then(({ breeds }) => {
       const breedStrings = breeds.map(({ name }) => name);
       setBreeds(breedStrings);
