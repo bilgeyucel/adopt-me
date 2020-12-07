@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { render } from "react-dom";
 import SearchParams from "./SearchParams";
-import { Router, Link } from "@reach/router";
+import { Router } from "@reach/router";
 import Details from "./Details";
 import ThemeContext from "./ThemeContext";
+import Navbar from "./Navbar";
 // import Pet from "./Pet";
 
 const App = () => {
@@ -11,9 +12,7 @@ const App = () => {
   return (
     <ThemeContext.Provider value={theme}>
       <div>
-        <header>
-          <Link to={"/ "}>Adopt-me!</Link>
-        </header>
+        <Navbar />
         <Router>
           <SearchParams path={"/"} />
           <Details path={"/details/:id"} />
